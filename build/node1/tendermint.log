@@ -1,0 +1,40 @@
+I[2020-04-13|11:26:54.932] Version info                                 module=main software=0.33.3 block=10 p2p=7
+I[2020-04-13|11:26:55.125] Starting Node                                module=main impl=Node
+I[2020-04-13|11:26:55.190] Started node                                 module=main nodeInfo="{ProtocolVersion:{P2P:7 Block:10 App:1} DefaultNodeID:d8b3679ce1477023a421d099f4c4a141104a8121 ListenAddr:tcp://0.0.0.0:26656 Network:chain-eWMDT3 Version:0.33.3 Channels:4020212223303800 Moniker:74396973BD972426 Other:{TxIndex:on RPCAddress:tcp://0.0.0.0:26657}}"
+E[2020-04-13|11:26:55.196] dialing failed (attempts: 1): dial tcp 192.167.10.5:26656: connect: connection refused module=pex addr=f927371ba5a70ddb1941fe46a1b8daa1f23ffb58@192.167.10.5:26656
+I[2020-04-13|11:26:58.006] Executed block                               module=state height=1 validTxs=0 invalidTxs=0
+I[2020-04-13|11:26:58.068] Committed state                              module=state height=1 txs=0 appHash=0000000000000000
+I[2020-04-13|11:27:00.096] Executed block                               module=state height=2 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:00.168] Committed state                              module=state height=2 txs=0 appHash=0000000000000000
+I[2020-04-13|11:27:02.045] Executed block                               module=state height=3 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:02.114] Committed state                              module=state height=3 txs=0 appHash=0000000000000000
+I[2020-04-13|11:27:03.900] Executed block                               module=state height=4 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:03.981] Committed state                              module=state height=4 txs=0 appHash=0000000000000000
+I[2020-04-13|11:27:06.085] Executed block                               module=state height=5 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:06.151] Committed state                              module=state height=5 txs=0 appHash=0000000000000000
+I[2020-04-13|11:27:08.168] Executed block                               module=state height=6 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:08.269] Committed state                              module=state height=6 txs=0 appHash=0000000000000000
+I[2020-04-13|11:27:10.039] Executed block                               module=state height=7 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:10.117] Committed state                              module=state height=7 txs=0 appHash=0000000000000000
+I[2020-04-13|11:27:12.236] Executed block                               module=state height=8 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:12.295] Committed state                              module=state height=8 txs=0 appHash=0000000000000000
+I[2020-04-13|11:27:14.413] Executed block                               module=state height=9 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:14.481] Committed state                              module=state height=9 txs=0 appHash=0000000000000000
+I[2020-04-13|11:27:16.580] Executed block                               module=state height=10 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:16.655] Committed state                              module=state height=10 txs=0 appHash=0000000000000000
+I[2020-04-13|11:27:18.509] Executed block                               module=state height=11 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:18.607] Committed state                              module=state height=11 txs=0 appHash=0000000000000000
+I[2020-04-13|11:27:21.236] Executed block                               module=state height=12 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:21.308] Committed state                              module=state height=12 txs=0 appHash=0000000000000000
+I[2020-04-13|11:27:23.652] Executed block                               module=state height=13 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:23.747] Committed state                              module=state height=13 txs=0 appHash=0000000000000000
+E[2020-04-13|11:27:25.205] dialing failed (attempts: 1): self ID<d8b3679ce1477023a421d099f4c4a141104a8121> module=pex addr=d8b3679ce1477023a421d099f4c4a141104a8121@192.167.10.3:26656
+I[2020-04-13|11:27:25.968] Executed block                               module=state height=14 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:26.045] Committed state                              module=state height=14 txs=0 appHash=0000000000000000
+I[2020-04-13|11:27:28.075] Executed block                               module=state height=15 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:28.131] Committed state                              module=state height=15 txs=0 appHash=0000000000000000
+I[2020-04-13|11:27:29.896] Executed block                               module=state height=16 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:29.972] Committed state                              module=state height=16 txs=0 appHash=0000000000000000
+I[2020-04-13|11:27:32.247] Executed block                               module=state height=17 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:32.348] Committed state                              module=state height=17 txs=0 appHash=0000000000000000
+E[2020-04-13|11:27:33.202] Stopping peer for error                      module=p2p peer="Peer{MConn{192.167.10.5:43286} f927371ba5a70ddb1941fe46a1b8daa1f23ffb58 in}" err=EOF

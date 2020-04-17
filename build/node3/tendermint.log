@@ -1,0 +1,38 @@
+I[2020-04-13|11:26:55.396] Version info                                 module=main software=0.33.3 block=10 p2p=7
+I[2020-04-13|11:26:55.498] Starting Node                                module=main impl=Node
+I[2020-04-13|11:26:55.548] Started node                                 module=main nodeInfo="{ProtocolVersion:{P2P:7 Block:10 App:1} DefaultNodeID:f927371ba5a70ddb1941fe46a1b8daa1f23ffb58 ListenAddr:tcp://0.0.0.0:26656 Network:chain-eWMDT3 Version:0.33.3 Channels:4020212223303800 Moniker:A2DE4FF64BB33C4F Other:{TxIndex:on RPCAddress:tcp://0.0.0.0:26657}}"
+I[2020-04-13|11:26:57.655] Executed block                               module=state height=1 validTxs=0 invalidTxs=0
+I[2020-04-13|11:26:57.714] Committed state                              module=state height=1 txs=0 appHash=0000000000000000
+I[2020-04-13|11:27:00.129] Executed block                               module=state height=2 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:00.202] Committed state                              module=state height=2 txs=0 appHash=0000000000000000
+I[2020-04-13|11:27:02.050] Executed block                               module=state height=3 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:02.116] Committed state                              module=state height=3 txs=0 appHash=0000000000000000
+I[2020-04-13|11:27:03.897] Executed block                               module=state height=4 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:03.948] Committed state                              module=state height=4 txs=0 appHash=0000000000000000
+I[2020-04-13|11:27:06.112] Executed block                               module=state height=5 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:06.187] Committed state                              module=state height=5 txs=0 appHash=0000000000000000
+I[2020-04-13|11:27:07.942] Executed block                               module=state height=6 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:08.012] Committed state                              module=state height=6 txs=0 appHash=0000000000000000
+I[2020-04-13|11:27:10.185] Executed block                               module=state height=7 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:10.250] Committed state                              module=state height=7 txs=0 appHash=0000000000000000
+I[2020-04-13|11:27:12.241] Executed block                               module=state height=8 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:12.298] Committed state                              module=state height=8 txs=0 appHash=0000000000000000
+I[2020-04-13|11:27:14.407] Executed block                               module=state height=9 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:14.477] Committed state                              module=state height=9 txs=0 appHash=0000000000000000
+I[2020-04-13|11:27:16.540] Executed block                               module=state height=10 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:16.599] Committed state                              module=state height=10 txs=0 appHash=0000000000000000
+I[2020-04-13|11:27:18.613] Executed block                               module=state height=11 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:18.710] Committed state                              module=state height=11 txs=0 appHash=0000000000000000
+I[2020-04-13|11:27:21.224] Executed block                               module=state height=12 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:21.309] Committed state                              module=state height=12 txs=0 appHash=0000000000000000
+I[2020-04-13|11:27:23.755] Executed block                               module=state height=13 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:23.834] Committed state                              module=state height=13 txs=0 appHash=0000000000000000
+E[2020-04-13|11:27:25.561] dialing failed (attempts: 1): self ID<f927371ba5a70ddb1941fe46a1b8daa1f23ffb58> module=pex addr=f927371ba5a70ddb1941fe46a1b8daa1f23ffb58@192.167.10.5:26656
+I[2020-04-13|11:27:25.778] Executed block                               module=state height=14 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:25.895] Committed state                              module=state height=14 txs=0 appHash=0000000000000000
+I[2020-04-13|11:27:28.005] Executed block                               module=state height=15 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:28.097] Committed state                              module=state height=15 txs=0 appHash=0000000000000000
+I[2020-04-13|11:27:30.100] Executed block                               module=state height=16 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:30.153] Committed state                              module=state height=16 txs=0 appHash=0000000000000000
+I[2020-04-13|11:27:32.354] Executed block                               module=state height=17 validTxs=0 invalidTxs=0
+I[2020-04-13|11:27:32.434] Committed state                              module=state height=17 txs=0 appHash=0000000000000000
