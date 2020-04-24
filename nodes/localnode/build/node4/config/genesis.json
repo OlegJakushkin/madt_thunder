@@ -1,0 +1,32 @@
+{
+  "genesis_time": "2020-04-24T20:21:27.946918335Z",
+  "chain_id": "test-chain-yelGsJ",
+  "consensus_params": {
+    "block": {
+      "max_bytes": "22020096",
+      "max_gas": "-1",
+      "time_iota_ms": "1000"
+    },
+    "evidence": {
+      "max_age_num_blocks": "100000",
+      "max_age_duration": "172800000000000"
+    },
+    "validator": {
+      "pub_key_types": [
+        "ed25519"
+      ]
+    }
+  },
+  "validators": [
+    {
+      "address": "365419D08B3A7D88F2A99CE536F4C63108B92BE7",
+      "pub_key": {
+        "type": "tendermint/PubKeyEd25519",
+        "value": "Fle8sXCy8IxewUOva5JxNQDUaBOZHAevD70vpt+OV+o="
+      },
+      "power": "10",
+      "name": ""
+    }
+  ],
+  "app_hash": ""
+}
