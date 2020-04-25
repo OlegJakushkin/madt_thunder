@@ -7,6 +7,7 @@ BINARY=/tendermint/${BINARY:-tendermint}
 ID=${ID:-0}
 LOG=${LOG:-tendermint.log}
 search_path=tendermint/tendermint
+echo ID
 ##
 ## Assert linux binary
 ##
