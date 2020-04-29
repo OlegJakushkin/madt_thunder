@@ -1,5 +1,5 @@
 
-## 4-nodes testnet using MADT
+## 4-nodes Tendermint testnet using MADT network modelling system
 To run:
 
 1. Download and start MADT
