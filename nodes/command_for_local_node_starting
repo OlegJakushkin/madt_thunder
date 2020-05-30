@@ -1,0 +1,2 @@
+# sudo docker run --name local_tender --privileged=True -p 26665:26656/tcp -p 26666:26657/tcp --env ID=4 "tendermint/nonvalidator"
+
