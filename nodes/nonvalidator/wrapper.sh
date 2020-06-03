@@ -12,7 +12,6 @@ echo ID
 ## Assert linux binary
 ##
 
-
 if ! [ -f "${BINARY}" ]; then
     for entry in "$search_dir"/*
     do

@@ -5,33 +5,38 @@ def main():
     net = Network('15.0.0.0/8')
     node_count = 4
     thunders = []
-    path = 'my:/home/nastya/magt/tutorials/my_1/build/tendermint:Z'
     # create network nodes that will represent client and server
     thunder1 = net.create_node('node1', 
                         privileged=True,
-                        image="tendermint/localnode",
+                        image="tendermint/validator",
                         ports={'26656/tcp': 26656, '26657/tcp': 26657},
                         environment={'ID':'0','LOG':'${LOG:-tendermint.log}'})
     thunder2 = net.create_node('node2', 
                         privileged=True,
-                        image="tendermint/localnode",
+                        image="tendermint/validator",
                         ports={'26656/tcp': 26659, '26657/tcp': 26660},
                         environment={'LOG':'${LOG:-tendermint.log}', 'ID':'1'})
     thunder3 = net.create_node('node3', 
                         privileged=True,
-                        image="tendermint/localnode",
+                        image="tendermint/validator",
                         environment={'LOG':'${LOG:-tendermint.log}', 'ID':'2'},
                         ports={'26656/tcp': 26661, '26657/tcp': 26662},
                         )
     thunder4 = net.create_node('node4', 
                         privileged=True,
-                        image="tendermint/localnode",
+                        image="tendermint/validator",
                         environment={'LOG':'${LOG:-tendermint.log}', 'ID':'3'},
                         ports={'26656/tcp': 26663, '26657/tcp': 26664},
                         )
+    thunder5 = net.create_node('node5', 
+                        privileged=True,
+                        image="tendermint/nonvalidator",
+                        environment={'LOG':'${LOG:-tendermint.log}', 'ID':'4'},
+                        ports={'26656/tcp': 26665, '26657/tcp': 26666},
+                        )
     
     # create a local network that will connect all those nodes
-    net.create_subnet('net', (thunder1,thunder2,thunder3,thunder4))
+    net.create_subnet('net', (thunder1,thunder2,thunder3,thunder4, thunder5))
     # distribute IP addresses
     net.configure(verbose=True)
 
