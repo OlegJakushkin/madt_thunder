@@ -1,7 +1,8 @@
 # Makefile for the "localnode" docker image.
 
 all:
-	build-validator build-nonvalidator
+	build-validator 
+	build-nonvalidator
 .PHONY: all
 
 build-validator:

@@ -34,3 +34,6 @@ python3 ./lab.py
 5. Open lab ![image](https://user-images.githubusercontent.com/2915361/76143162-fe747180-606c-11ea-8b50-429b9067c62b.png)
 6. Observe graph ![image2](https://user-images.githubusercontent.com/2915361/76143179-2368e480-606d-11ea-8d11-8ce5d360884e.png)
  in "tutorials" folder
+
+7. To get up node:
+	sudo docker exec MADT_my_node[number_of_node] sh -c 'until [ -e '/lab/lab.sock' ]; do sleep 3; done; "/usr/bin/wrapper.sh" "node" "--proxy_app" "kvstore"'
