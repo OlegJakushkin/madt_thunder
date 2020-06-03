@@ -7,6 +7,15 @@ def main():
     thunders = []
     # path = 'my:/home/svetlov/Downloads/madt/tutorials/madt_thunder/build/tendermint:Z'
     # create network nodes that will represent client and server
+    # for x in range(1,4):
+	   #  thunders.append(net.create_node('node'+str(x), 
+    #                     privileged=True,
+    #                     image="tendermint/validator",
+    #                     ports={'26656/tcp': 26659+2*(x-1), '26657/tcp': 26660+2*(x-1)},
+    #                     environment={'ID':str(x-1),'LOG':'${LOG:-tendermint.log}'},
+    #                     # entrypoint="sleep "+str(int(x>4)*x*10)
+    #                     ))
+
     thunder1 = net.create_node('node1', 
                         privileged=True,
                         image="tendermint/validator",
@@ -29,17 +38,20 @@ def main():
                         environment={'LOG':'${LOG:-tendermint.log}', 'ID':'3'},
                         ports={'26656/tcp': 26663, '26657/tcp': 26664},
                         )
-    thunder5 = net.create_node('node5', 
-                        privileged=True,
-                        image="tendermint/nonvalidator",
-                        environment={'LOG':'${LOG:-tendermint.log}', 'ID':'4'},
-                        ports={'26656/tcp': 26665, '26657/tcp': 26666},
-                        entrypoint="sleep 10000000",
-                        #volumes=path
-                        )
+   
+
+    # thunder5 = net.create_node('node5', 
+    #                     privileged=True,
+    #                     image="tendermint/nonvalidator",
+    #                     environment={'LOG':'${LOG:-tendermint.log}', 'ID':'4'},
+    #                     ports={'26656/tcp': 26665, '26657/tcp': 26666},
+    #                     entrypoint="sleep 10000000",
+    #                     #volumes=path
+    #                     )
     
     # create a local network that will connect all those nodes
-    net.create_subnet('net', (thunder1,thunder2,thunder3,thunder4, thunder5))
+    # net.create_subnet('net', thunders)
+    net.create_subnet('net', (thunder1,thunder2,thunder3,thunder4))
     # distribute IP addresses
     net.configure(verbose=True)
 
