@@ -3,11 +3,11 @@ from madt_lib.network import Network
 
 def main():
     net = Network('15.0.0.0/8')
-    node_count = 4
+    node_count = 6
     thunders = []
     # path = 'my:/home/svetlov/Downloads/madt/tutorials/madt_thunder/build/tendermint:Z'
     # create network nodes that will represent client and server
-    for x in range(1,5):
+    for x in range(1,6):
 	    thunders.append(net.create_node('node'+str(x), 
                         privileged=True,
                         image="tendermint/validator",
@@ -15,7 +15,7 @@ def main():
                         environment={'ID':str(x-1),'LOG':'${LOG:-tendermint.log}'},
                         ))
     # create sleep node to simulated adding new nodes
-    for x in range(5,7):
+    for x in range(6,7):
         thunders.append(net.create_node('node'+str(x), 
                         privileged=True,
                         image="tendermint/validator",
