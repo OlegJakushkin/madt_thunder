@@ -36,4 +36,11 @@ python3 ./lab.py
  in "tutorials" folder
 
 7. To get up node:
+```
 	sudo docker exec MADT_my_node[number_of_node] sh -c 'until [ -e '/lab/lab.sock' ]; do sleep 3; done; "/usr/bin/wrapper.sh" "node" "--proxy_app" "kvstore"'
+```
+
+8. Branch master:
+	In file lab.py create 5 node.
+   Branch tendermint:
+   	In file lab.py create 15 node, but work slow and long.
