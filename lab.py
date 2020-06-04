@@ -7,13 +7,22 @@ def main():
     thunders = []
     # path = 'my:/home/svetlov/Downloads/madt/tutorials/madt_thunder/build/tendermint:Z'
     # create network nodes that will represent client and server
-    for x in range(1,16):
+    for x in range(1,5):
 	    thunders.append(net.create_node('node'+str(x), 
                         privileged=True,
                         image="tendermint/validator",
                         ports={'26656/tcp': 26659+2*(x-1), '26657/tcp': 26660+2*(x-1)},
                         environment={'ID':str(x-1),'LOG':'${LOG:-tendermint.log}'},
+                        ))
+    # create sleep node to simulated adding new nodes
+    for x in range(5,16):
+        thunders.append(net.create_node('node'+str(x), 
+                        privileged=True,
+                        image="tendermint/validator",
+                        ports={'26656/tcp': 26659+2*(x-1), '26657/tcp': 26660+2*(x-1)},
+                        environment={'ID':str(x-1),'LOG':'${LOG:-tendermint.log}'},
                         # entrypoint="sleep "+str(int(x>4)*x*10)
+                        entrypoint="sleep 100000",
                         ))
 
     # thunder1 = net.create_node('node1', 
