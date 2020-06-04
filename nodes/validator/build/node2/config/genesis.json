@@ -1,6 +1,6 @@
 {
-  "genesis_time": "2020-04-18T11:36:15.710972916Z",
-  "chain_id": "chain-2T6RYs",
+  "genesis_time": "2020-06-04T08:42:17.220818071Z",
+  "chain_id": "chain-gFJX6a",
   "consensus_params": {
     "block": {
       "max_bytes": "22020096",
@@ -19,40 +19,58 @@
   },
   "validators": [
     {
-      "address": "76CB1531CD5BD85DA42A942895572065D79FAB23",
+      "address": "55AF409E396539B1BBBBFFEEC61916A6B2D1FC98",
       "pub_key": {
         "type": "tendermint/PubKeyEd25519",
-        "value": "btFfbj3CiYal8UGlWQWGg9OG3Aq/BqKMOG7UqBbib6A="
+        "value": "/mawmtpLLVgwJgcpvsKATIxZSV+WMxJkk2Nlgb8IwKc="
       },
       "power": "1",
       "name": "node0"
     },
     {
-      "address": "2E4BBA6B220FF3F6F0F31279D36313C81912E5C9",
+      "address": "769A37F36EA32E2796E020D6297A4262F15B6690",
       "pub_key": {
         "type": "tendermint/PubKeyEd25519",
-        "value": "TgEtoSNh6zYnu91nlYmSrp/d0vRv3G4m7hfDBWQ2Nog="
+        "value": "Q/jXqCgkLQz5m5/XCDhCWqmivycfoDuhC5pYnPjbPFE="
       },
       "power": "1",
       "name": "node1"
     },
     {
-      "address": "C6A30CB5A30DFF77536125126619EF18CBDE8665",
+      "address": "619955B81473AD5AEB42EEF66D0BD38D3BC68ADE",
       "pub_key": {
         "type": "tendermint/PubKeyEd25519",
-        "value": "4mgWGoAqQuE5RhI9mjIde609/UC2iVPz8/UwhUPtPiU="
+        "value": "8PudUZ1w62CZw360lVyXnwIl+oUwIuUWx5b0Ye9dHUM="
       },
       "power": "1",
       "name": "node2"
     },
     {
-      "address": "72DE91D733B5CB08F79E5A2F8B9CD53B58E79BC9",
+      "address": "2B1D913199713DF10E5C4AAB8C5EFFDF311AACD4",
       "pub_key": {
         "type": "tendermint/PubKeyEd25519",
-        "value": "S/keKH2V/FsHTl9fS+GMLB6/D6CSFsUScdy80lmcWDQ="
+        "value": "BydNqOEKKqmGM03JL+ZQNfYgmCLbZFkQUnZ6lXJOKmw="
       },
       "power": "1",
       "name": "node3"
+    },
+    {
+      "address": "A81DF0665B28FC92CFFC776064231E02190278D7",
+      "pub_key": {
+        "type": "tendermint/PubKeyEd25519",
+        "value": "WPjreIxlruDgv4uQSGb4pR9JxPe/e4IfyoRZDH0JVdg="
+      },
+      "power": "1",
+      "name": "node4"
+    },
+    {
+      "address": "749F0D8C26EE2A2B96FE343E20769BBFA0F3773D",
+      "pub_key": {
+        "type": "tendermint/PubKeyEd25519",
+        "value": "StknBNivTRkh0D7ADsTDf144YP9k2BN5a0dSe050iW4="
+      },
+      "power": "1",
+      "name": "node5"
     }
   ],
   "app_hash": ""
