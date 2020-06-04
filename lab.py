@@ -15,7 +15,7 @@ def main():
                         environment={'ID':str(x-1),'LOG':'${LOG:-tendermint.log}'},
                         ))
     # create sleep node to simulated adding new nodes
-    for x in range(5,16):
+    for x in range(5,7):
         thunders.append(net.create_node('node'+str(x), 
                         privileged=True,
                         image="tendermint/validator",

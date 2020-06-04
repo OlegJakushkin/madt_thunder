@@ -13,7 +13,7 @@
 proxy_app = "tcp://127.0.0.1:26658"
 
 # A custom human readable name for this node
-moniker = "AFF215715EC631A8"
+moniker = "75D16B58835169D1"
 
 # If this node is many blocks behind the tip of the chain, FastSync
 # allows them to catchup quickly by downloading blocks in parallel
@@ -81,7 +81,7 @@ filter_peers = false
 [rpc]
 
 # TCP or UNIX socket address for the RPC server to listen on
-laddr = "tcp://0.0.0.0:26657"
+laddr = "tcp://127.0.0.1:26657"
 
 # A list of origins a cross-domain request can be executed from
 # Default value '[]' disables cors support
@@ -172,7 +172,7 @@ external_address = ""
 seeds = ""
 
 # Comma separated list of nodes to keep persistent connections to
-persistent_peers = "f5498a1d2d2f86d9ff04ee15f27cad429a593c16@15.0.0.2:26656,56fcfd8190a04654ce92e49426d1c1cb9e1d1a84@15.0.0.3:26656,8fbe2b50fa21ea8f8db3caff855fd35905b493b7@15.0.0.4:26656,a0ad7e02cb10d138ac2464dd869268bd713fc550@15.0.0.5:26656,1c3705cc79ade1632b8cf119b2a09cdd839caa33@15.0.0.6:26656,fd86b4275b469dbc40aed481e30affee7eb6f68b@15.0.0.7:26656,a9dc92adc26cb40efe0f76bb8699d384b6b9a4d1@15.0.0.8:26656,bdc92ea262f50d03cd453516cbf605ca2447e6ac@15.0.0.9:26656,8f33d6763119a263aada86c282e6763378432da9@15.0.0.10:26656,25114ca7037145d6080901ae1adbe8b045006dde@15.0.0.11:26656,db74e1bbf361dca6261b82a71f8f2b2fefd016f0@15.0.0.12:26656,493130c6143a52e2bb911f60333f6308ae00a4c4@15.0.0.13:26656,dbaaef64ee00c16bca7ca7ea5970ae3e60a5369b@15.0.0.14:26656,b94313455b46e12d036096cb03fb8f10b033d0a4@15.0.0.15:26656,bfa760e48f4ed990a6d269a62aa3a68a87a5556b@15.0.0.16:26656"
+persistent_peers = "9c3caa7df19779c9921714089b542aeb7a2d44f9@15.0.0.2:26656,689bdce9cf6fb39f2b7b75af0cdc1190df3429f0@15.0.0.3:26656,dbf31622410bf4e48f39fba74712d0a02c271654@15.0.0.4:26656,8e663bba187a99c8d96f31b98e5675b1f7084a8a@15.0.0.5:26656,888d86367ff15849227817aebfffb57e41cfb63c@15.0.0.6:26656,3e57afbf45554b2161cf8560ffd54491bdcad989@15.0.0.7:26656"
 
 # UPNP port forwarding
 upnp = false
