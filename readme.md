@@ -1,5 +1,5 @@
 
-## 4-nodes Tendermint testnet using MADT network modelling system
+## 7-nodes Tendermint testnet using MADT network modelling system
 To run:
 
 1. Download and start MADT
@@ -17,55 +17,88 @@ sudo -HE env PYTHONPATH=$HOME/madt:$PYTHONPATH SSH_PWD=demo python3 madt_ui/main
 ```
 2. Downoload this repo 
 
-*Say you have this lab folder "my" in "tutorials"*
+*Say you now have this lab folder "madt_thunder" in "tutorials"*
 
-3. Build image for 4 nodes in MADT 
+3. Build images for 6 validators in MADT 
 
-Every node has 4 folders in it with initial data and config of all 4 starting  nodes
+Every node has 6 folders in it with initial data and config of all 4 starting  nodes and tendermint binary.
 
 ```
 #open new terminal window
 cd ~/madt
-cd ./tutorials/my/nodes
-make
+cd ./tutorials/madt_thunder/nodes/
+make build-validator
 ```
-4. Start the lab
+It will build image tendermint/validator
+
+4. Build image for 1 nonvalidator
+```
+make build-nonvalidator
+```
+It will build image tendermint/nonvalidator
+
+5. Start the lab
 
 ```
 cd ..
 python3 ./lab.py
 ```
+lab.py will have such nodes for validators and nonvalidators:
+```
+# Validators
+thunders.append(net.create_node('node'+str(x), 
+                        privileged=True,
+                        image="tendermint/validator",
+                        ports={'26656/tcp': 26659+2*(x-1), '26657/tcp': 26660+2*(x-1)},
+                        environment={'ID':str(x-1),'LOG':'${LOG:-tendermint.log}'},
+                        ))
+
+# Nonvalidators
+thunders.append(net.create_node('node'+str(x), 
+                        privileged=True,
+                        image="tendermint/nonvalidator",
+                        ports={'26656/tcp': 26659+2*(7-1), '26657/tcp': 26660+2*(x-1)},
+                        environment={'ID':str(x-1),'LOG':'${LOG:-tendermint.log}'},
+                        # entrypoint="sleep "+str(int(x>4)*x*10)
+                        #entrypoint="sleep 100000",
+                        ))
+                      
+```
 
 5. Open 127.0.0.1:80
 6. login as `demo:demo`
-7. Open lab ![image](https://user-images.githubusercontent.com/2915361/76143162-fe747180-606c-11ea-8b50-429b9067c62b.png)
-8. Observe graph ![image2](https://user-images.githubusercontent.com/2915361/76143179-2368e480-606d-11ea-8d11-8ce5d360884e.png)
- in "my" folder
+7. Open lab "my"
+8. Observe graph
 
-You can set 100% loss for one of nodes (you need 2/3 working nodes for consensus). 
+You can set 100% loss for two of nodes (you need 2/3 working nodes for consensus). If you set 100%loss for three nodes, you will get error messages and creating blocks will stop until one of nodes wakes up.
 
-## Adding local non-validator node
+## Adding non-validator node
 
-To see what's happening in realtime in your terminal, you can add one or more non-validator nodes with specified ports for listening, which fit to listening ports of validators. In my redaction it's 26657. So, to run localnode, you need:
-1. Build nonvalidator image
-```
-cd nodes/nonvalidator
-make
-```
-2. Run docker container
+You can add one or more non-validator nodes with specified seeds for listening, which fit to adresses of validators. To create nonvalidator, you can just copy genesis.json to its folder (e.g. node 7) and change config file to specify seeds. No priv-key file or key-file needed! If seeds section contains no nodes, nonvalidator won't "see" anything. 
 
-```
-sudo docker run --name local_tender --privileged=True -p 26665:26656/tcp -p 26666:26657/tcp --env ID=4 "tendermint/nonvalidator"
-
-```
-Of course, you can add nonvalidator node in MADT too, but you need to start it at the same time with other nodes. Hence you need to add node by changing lab.py file (you can specify needed parameters as for local node, but in notation of MADT).
+Of course, nonvalidator-nodes must be set up in lab.py **before** net starts.
 
 ## Adding validator
 
-To add validator, you need to specify it in genesis file of all nodes **before** starting testnet. This is not supported by us now.
+To add validator, you need to specify it in genesis file of all nodes **before** starting testnet. To be able to add it when other nodes
+will be already working you need to add this node to lab.py in such way (entrypoint is different from others):
+```
+thunders.append(net.create_node('node'+str(x), 
+                        privileged=True,
+                        image="tendermint/validator",
+                        ports={'26656/tcp': 26659+2*(x-1), '26657/tcp': 26660+2*(x-1)},
+                        environment={'ID':str(x-1),'LOG':'${LOG:-tendermint.log}'},
+                        # entrypoint="sleep "+str(int(x>4)*x*10)
+                        entrypoint="sleep 100000",
+                        ))
+```
+So it will sleep 100000 sec. To wake it up, you need to type in terminal [number_of_node] is placeholder to yours number of this node:
+```
+sudo docker exec MADT_my_node[number_of_node] sh -c 'until [ -e '/lab/lab.sock' ]; do sleep 3; done; "/usr/bin/wrapper.sh" "node" "--proxy_app" "kvstore"'
+```
 
 ## TODO
 - [x] Add local nonvalidator
-- [ ] Change docker image for nonvalidator
-- [ ] Add more validators
-- [ ] Add more business-logic
+- [x] Change docker image for nonvalidator
+- [x] Add more validators
+- [x] Add more business-logic
