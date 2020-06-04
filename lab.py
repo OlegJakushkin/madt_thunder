@@ -24,7 +24,15 @@ def main():
                         # entrypoint="sleep "+str(int(x>4)*x*10)
                         entrypoint="sleep 100000",
                         ))
-
+    x=7
+    thunders.append(net.create_node('node'+str(x), 
+                        privileged=True,
+                        image="tendermint/nonvalidator",
+                        ports={'26656/tcp': 26659+2*(7-1), '26657/tcp': 26660+2*(x-1)},
+                        environment={'ID':str(x-1),'LOG':'${LOG:-tendermint.log}'},
+                        # entrypoint="sleep "+str(int(x>4)*x*10)
+                        #entrypoint="sleep 100000",
+                        ))
     # thunder1 = net.create_node('node1', 
     #                     privileged=True,
     #                     image="tendermint/validator",
